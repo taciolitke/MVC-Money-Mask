@@ -1,0 +1,60 @@
+﻿@model MoneyModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome To MVC Money Mask Examples</h1>
+
+        <p>Money Mask Input Examples</p>
+        @nameof(Model.MoneyExample1) <input id="example1" value="@Model.MoneyExample1" class="money" />
+        <hr />
+        @nameof(Model.MoneyExample2) <input id="example2" value="@Model.MoneyExample2" class="money" />
+        <hr />
+        @nameof(Model.MoneyExample3) <input id="example3" value="@Model.MoneyExample3" class="money" />
+        <hr />
+        @nameof(Model.MoneyExample4)<input id="example4" value="@Model.MoneyExample4" class="money" />
+        <hr />
+
+        <p>Money Mask Label Examples</p>
+
+        <table>
+            <tr>
+                <td>Examples</td>
+                <td>Value</td>
+            </tr>
+            <tr>
+                <td scope="row" class="text-center align-middle">
+                    @nameof(Model.MoneyExample1)
+                </td>
+                <td scope="row" class="text-center align-middle">
+                    @string.Format("{0:C}", Model.MoneyExample1)
+                </td>
+            </tr>
+            <tr>
+                <td scope="row" class="text-center align-middle">
+                    @nameof(Model.MoneyExample2)
+                </td>
+                <td scope="row" class="text-center align-middle">
+                    @string.Format("{0:C}", Model.MoneyExample2)
+                </td>
+            </tr>
+            <tr>
+                <td scope="row" class="text-center align-middle">
+                    @nameof(Model.MoneyExample3)
+                </td>
+                <td scope="row" class="text-center align-middle">
+                    @string.Format("{0:C}", Model.MoneyExample3)
+                </td>
+            </tr>
+            <tr>
+                <td scope="row" class="text-center align-middle">
+                    @nameof(Model.MoneyExample4)
+                </td>
+                <td scope="row" class="text-center align-middle">
+                    @string.Format("{0:C}", Model.MoneyExample4)
+                </td>
+            </tr>
+            <tr>
+        </table>
+    </div>
